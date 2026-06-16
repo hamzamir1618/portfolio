@@ -706,6 +706,32 @@ ul { list-style: none; }
   display: none;
 }
 
+/* repo link */
+.project-card__repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--white-muted);
+  transition: color var(--transition);
+  text-decoration: none;
+}
+
+.project-card__repo:hover {
+  color: var(--red);
+}
+
+.project-card__repo svg {
+  opacity: 0.7;
+  transition: opacity var(--transition);
+}
+
+.project-card__repo:hover svg {
+  opacity: 1;
+}
+
 /* ============================================================
    SKILLS SECTION
    ============================================================ */
