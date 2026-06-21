@@ -422,12 +422,11 @@ ul { list-style: none; }
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .hero__content {
-  flex: 1;
+  flex: 1 1 55%;
   max-width: 620px;
 }
 
