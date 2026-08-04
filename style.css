@@ -834,18 +834,13 @@ ul { list-style: none; }
   box-shadow: var(--shadow);
 }
 
-.project-card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 8px 8px 0 var(--ink);
-}
-
-/* Red accent — top bar */
+/* Category accent — top bar */
 .project-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 5px;
-  background: var(--red);
+  background: var(--card-accent, var(--red));
 }
 
 .project-card__icon {
@@ -854,11 +849,43 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--red);
+  background: var(--card-accent, var(--red));
   border: 2px solid var(--ink);
   margin-bottom: 1.25rem;
   color: var(--white);
   box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* --- Category Colors --- */
+/* Web — bold blue */
+.project-card[data-category="web"] {
+  --card-accent: #1a6bff;
+}
+
+/* AI/ML — vivid purple */
+.project-card[data-category="ai-ml"] {
+  --card-accent: #7c3aed;
+}
+
+/* Games — comic green */
+.project-card[data-category="games"] {
+  --card-accent: #0d9e4f;
+}
+
+/* Desktop — bold orange */
+.project-card[data-category="desktop"] {
+  --card-accent: #e67700;
+}
+
+/* Design — stays red (primary accent) */
+.project-card[data-category="design"] {
+  --card-accent: var(--red);
+}
+
+/* Category-colored hover shadow */
+.project-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--card-accent, var(--ink));
 }
 
 .project-card__title {
