@@ -33,6 +33,7 @@
         <a href="#about" class="nav__link">About</a>
         <a href="#experience" class="nav__link">Experience</a>
         <a href="#projects" class="nav__link">Projects</a>
+        <a href="#design" class="nav__link">Design</a>
         <a href="#skills" class="nav__link">Skills</a>
         <a href="#contact" class="nav__link">Contact</a>
         <button class="nav__resume-btn" id="resumeNavBtn">Resume ↓</button>
@@ -356,28 +357,263 @@
           </a>
         </div>
 
-        <!-- Design Portfolio -->
-        <div class="project-card reveal" data-category="design">
-          <div class="project-card__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="22" height="22"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" /></svg>
-          </div>
-          <h3 class="project-card__title">Design Portfolio</h3>
-          <p class="project-card__desc">Three years of graphic design work — event posters, CRANE magazine editorial layouts, character illustrations, concept art, and digital paintings.</p>
-          <div class="project-card__tags">
-            <span class="tag">Poster Design</span>
-            <span class="tag">Editorial</span>
-            <span class="tag">Illustration</span>
-            <span class="tag">Typography</span>
-          </div>
-          <a href="https://drive.google.com/drive/folders/13_c1PBNdtm5tcZmzmANZF53NqwQvbCVL?usp=sharing" target="_blank" rel="noopener" class="project-card__link" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;font-size:.8rem;font-weight:600;color:var(--red);transition:color .3s;">
-            View on Google Drive
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-          </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DESIGN SHOWCASE ========== -->
+  <section class="design section" id="design">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label">Chapter III.V</p>
+        <h2 class="section__title">The Art</h2>
+        <p class="section__subtitle">Three years of graphic design — posters, illustrations, UI mockups, and more.</p>
+        <hr class="divider" />
+      </div>
+
+      <div class="design__filters">
+        <button class="filter-btn active" data-design-filter="all">All</button>
+        <button class="filter-btn" data-design-filter="digital-art">Digital Art</button>
+        <button class="filter-btn" data-design-filter="promotional">Promotional</button>
+        <button class="filter-btn" data-design-filter="ui-ux">UI/UX</button>
+        <button class="filter-btn" data-design-filter="sketches">Sketches</button>
+        <button class="filter-btn" data-design-filter="game-design">Game Design</button>
+        <button class="filter-btn" data-design-filter="ms-paint">MS Paint</button>
+        <button class="filter-btn" data-design-filter="video-edits">Video Edits</button>
+      </div>
+
+      <div class="design__grid">
+
+        <!-- ===== DIGITAL ART ===== -->
+        <div class="gallery-item reveal" data-design-cat="digital-art">
+          <img src="Graphic%20Design%20XP/Digital%20Art/fwb_viltrumites_alt.png" alt="Viltrumites — Fan Art" loading="lazy" />
+          <div class="gallery-item__label">Viltrumites Fan Art <span>Digital Art</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="digital-art">
+          <img src="Graphic%20Design%20XP/Digital%20Art/mary_final.png" alt="Mary — Digital Portrait" loading="lazy" />
+          <div class="gallery-item__label">Mary — Digital Portrait <span>Digital Art</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="digital-art">
+          <img src="Graphic%20Design%20XP/Digital%20Art/reyna.png" alt="Reyna — Character Art" loading="lazy" />
+          <div class="gallery-item__label">Reyna — Character Art <span>Digital Art</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="digital-art">
+          <img src="Graphic%20Design%20XP/Digital%20Art/submission.png" alt="Submission — Digital Art" loading="lazy" />
+          <div class="gallery-item__label">Submission <span>Digital Art</span></div>
+        </div>
+
+        <!-- ===== PROMOTIONAL ===== -->
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/V.E.A.R.%20poster.png" alt="V.E.A.R. Event Poster" loading="lazy" />
+          <div class="gallery-item__label">V.E.A.R. Poster <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/innovation_hub%20poster.png" alt="Innovation Hub Poster" loading="lazy" />
+          <div class="gallery-item__label">Innovation Hub <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/poetry%20slam%20poster-2(4).png" alt="Poetry Slam Poster" loading="lazy" />
+          <div class="gallery-item__label">Poetry Slam <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/AniCon%20Tile-2.png" alt="AniCon Tile" loading="lazy" />
+          <div class="gallery-item__label">AniCon Tile <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/CRANE%20December%20Issue.png" alt="CRANE Magazine — December Issue" loading="lazy" />
+          <div class="gallery-item__label">CRANE Magazine <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/FLS%20GuestSpeakerPost.png" alt="FLS Guest Speaker Post" loading="lazy" />
+          <div class="gallery-item__label">FLS Guest Speaker <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/Recruitments.png" alt="Recruitment Post" loading="lazy" />
+          <div class="gallery-item__label">Recruitments <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/noor%20amir-english%20post-darker%20text-2.png" alt="Noor Amir Post" loading="lazy" />
+          <div class="gallery-item__label">Noor Amir Post <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/wp-poster.png" alt="WP Poster" loading="lazy" />
+          <div class="gallery-item__label">WP Poster <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/bootha%20edit-4.png" alt="Bootha Edit" loading="lazy" />
+          <div class="gallery-item__label">Bootha Edit <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/birb%20on%20da%20crossguard%20(3)%20extended%201080x1080.png" alt="Birb on the Crossguard" loading="lazy" />
+          <div class="gallery-item__label">Birb on the Crossguard <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/book%20club%20poster%20logo%20on%20corner%20and%20name.png" alt="Book Club Poster" loading="lazy" />
+          <div class="gallery-item__label">Book Club <span>Promotional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="promotional">
+          <img src="Graphic%20Design%20XP/Promotional/logo%20ss.png" alt="Logo Design" loading="lazy" />
+          <div class="gallery-item__label">Logo Design <span>Promotional</span></div>
+        </div>
+
+        <!-- ===== UI/UX ===== -->
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Full-Homepage.png" alt="Full Homepage — UI Design" loading="lazy" />
+          <div class="gallery-item__label">Full Homepage <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Best-Sellers-Page.png" alt="Best Sellers Page" loading="lazy" />
+          <div class="gallery-item__label">Best Sellers Page <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Login.png" alt="Login Screen" loading="lazy" />
+          <div class="gallery-item__label">Login Screen <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Cart.png" alt="Cart — UI Design" loading="lazy" />
+          <div class="gallery-item__label">Shopping Cart <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Checkout.png" alt="Checkout — UI Design" loading="lazy" />
+          <div class="gallery-item__label">Checkout <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Signup-1.png" alt="Signup Step 1" loading="lazy" />
+          <div class="gallery-item__label">Signup — Step 1 <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Signup-2.png" alt="Signup Step 2" loading="lazy" />
+          <div class="gallery-item__label">Signup — Step 2 <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Home_HF.png" alt="Home — High Fidelity" loading="lazy" />
+          <div class="gallery-item__label">Home (Hi-Fi) <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Menu_HF.png" alt="Menu — High Fidelity" loading="lazy" />
+          <div class="gallery-item__label">Menu (Hi-Fi) <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Calming%20Screen_HF.png" alt="Calming Screen — High Fidelity" loading="lazy" />
+          <div class="gallery-item__label">Calming Screen (Hi-Fi) <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Items%20in%20Cart_HF.png" alt="Items in Cart — High Fidelity" loading="lazy" />
+          <div class="gallery-item__label">Items in Cart (Hi-Fi) <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Order%20Confirmation_HF.png" alt="Order Confirmation" loading="lazy" />
+          <div class="gallery-item__label">Order Confirmation <span>UI/UX</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ui-ux">
+          <img src="Graphic%20Design%20XP/UI-UX/Track%20Progress_HF.png" alt="Track Progress" loading="lazy" />
+          <div class="gallery-item__label">Track Progress <span>UI/UX</span></div>
+        </div>
+
+        <!-- ===== SKETCHES ===== -->
+        <div class="gallery-item reveal" data-design-cat="sketches">
+          <img src="Graphic%20Design%20XP/Sketches/armor%20design%20w%20chainmail.JPG" alt="Armor Design with Chainmail" loading="lazy" />
+          <div class="gallery-item__label">Armor w/ Chainmail <span>Sketches</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="sketches">
+          <img src="Graphic%20Design%20XP/Sketches/armor%20design.JPG" alt="Armor Design" loading="lazy" />
+          <div class="gallery-item__label">Armor Design <span>Sketches</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="sketches">
+          <img src="Graphic%20Design%20XP/Sketches/containment%20suit%20design.JPG" alt="Containment Suit Design" loading="lazy" />
+          <div class="gallery-item__label">Containment Suit <span>Sketches</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="sketches">
+          <img src="Graphic%20Design%20XP/Sketches/suit%20design.JPG" alt="Suit Design" loading="lazy" />
+          <div class="gallery-item__label">Suit Design <span>Sketches</span></div>
+        </div>
+
+        <!-- ===== GAME DESIGN ===== -->
+        <div class="gallery-item reveal" data-design-cat="game-design">
+          <video src="Graphic%20Design%20XP/Game%20Design/pacman%20assembly%20demo.mp4" muted loop preload="metadata"></video>
+          <div class="gallery-item__label">Pacman Assembly Demo <span>Game Design</span></div>
+        </div>
+
+        <!-- ===== MS PAINT ===== -->
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Blue%20Knight.png" alt="Blue Knight" loading="lazy" />
+          <div class="gallery-item__label">Blue Knight <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Ciro.png" alt="Ciro" loading="lazy" />
+          <div class="gallery-item__label">Ciro <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/DEUS-X.png" alt="DEUS-X" loading="lazy" />
+          <div class="gallery-item__label">DEUS-X <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Dark%20Crusader%20mask.png" alt="Dark Crusader Mask" loading="lazy" />
+          <div class="gallery-item__label">Dark Crusader <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Dead%20Zone.png" alt="Dead Zone" loading="lazy" />
+          <div class="gallery-item__label">Dead Zone <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Kid%20Muscle%20UH.png" alt="Kid Muscle" loading="lazy" />
+          <div class="gallery-item__label">Kid Muscle <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Law.png" alt="Law" loading="lazy" />
+          <div class="gallery-item__label">Law <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Muscle%20Brain.png" alt="Muscle Brain" loading="lazy" />
+          <div class="gallery-item__label">Muscle Brain <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/My%20Future%20Ninja%20Suit.png" alt="Future Ninja Suit" loading="lazy" />
+          <div class="gallery-item__label">Future Ninja Suit <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Red%20Lightning.png" alt="Red Lightning" loading="lazy" />
+          <div class="gallery-item__label">Red Lightning <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/RukAng.png" alt="RukAng" loading="lazy" />
+          <div class="gallery-item__label">RukAng <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Silver%20Knight.png" alt="Silver Knight" loading="lazy" />
+          <div class="gallery-item__label">Silver Knight <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/Ultimatus.png" alt="Ultimatus" loading="lazy" />
+          <div class="gallery-item__label">Ultimatus <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/White%20Knight.png" alt="White Knight" loading="lazy" />
+          <div class="gallery-item__label">White Knight <span>MS Paint</span></div>
+        </div>
+        <div class="gallery-item reveal" data-design-cat="ms-paint">
+          <img src="Graphic%20Design%20XP/MS%20Paint%20(old)/osiris.png" alt="Osiris" loading="lazy" />
+          <div class="gallery-item__label">Osiris <span>MS Paint</span></div>
+        </div>
+
+        <!-- ===== VIDEO EDITS ===== -->
+        <div class="gallery-item reveal" data-design-cat="video-edits">
+          <video src="Graphic%20Design%20XP/Video%20Edits/book%20friend%20promo%20reel%20draft.mp4" muted loop preload="metadata"></video>
+          <div class="gallery-item__label">Book Friend Promo Reel <span>Video Edits</span></div>
         </div>
 
       </div>
     </div>
   </section>
+
+  <!-- ========== LIGHTBOX OVERLAY ========== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev">&#8249;</button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext">&#8250;</button>
+    <div class="lightbox__content" id="lightboxContent"></div>
+    <div class="lightbox__counter" id="lightboxCounter"></div>
+  </div>
 
   <!-- ========== SKILLS ========== -->
   <section class="skills section" id="skills">

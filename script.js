@@ -177,4 +177,119 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeModal();
   });
 
+  /* ----------------------------------------------------------
+     DESIGN GALLERY FILTERS
+     ---------------------------------------------------------- */
+  const designFilterBtns = document.querySelectorAll('[data-design-filter]');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  designFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.designFilter;
+
+      // Update active state
+      designFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter items
+      galleryItems.forEach(item => {
+        const cat = item.dataset.designCat;
+        if (filter === 'all' || cat === filter) {
+          item.classList.remove('hidden');
+          item.classList.remove('visible');
+          void item.offsetWidth;
+          item.classList.add('visible');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  /* ----------------------------------------------------------
+     LIGHTBOX
+     ---------------------------------------------------------- */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxContent = document.getElementById('lightboxContent');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+
+  let currentLightboxItems = [];
+  let currentLightboxIndex = 0;
+
+  const openLightbox = (item) => {
+    // Collect only visible items
+    currentLightboxItems = Array.from(document.querySelectorAll('.gallery-item:not(.hidden)'));
+    currentLightboxIndex = currentLightboxItems.indexOf(item);
+    showLightboxItem();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    // Pause any playing videos
+    const vid = lightboxContent.querySelector('video');
+    if (vid) vid.pause();
+  };
+
+  const showLightboxItem = () => {
+    const item = currentLightboxItems[currentLightboxIndex];
+    const img = item.querySelector('img');
+    const video = item.querySelector('video');
+
+    if (video) {
+      lightboxContent.innerHTML = `<video src="${video.src}" controls autoplay style="max-width:90vw;max-height:85vh;border:4px solid #fff;box-shadow:0 0 60px rgba(0,0,0,0.5)"></video>`;
+    } else if (img) {
+      lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt}" style="max-width:90vw;max-height:85vh;border:4px solid #fff;box-shadow:0 0 60px rgba(0,0,0,0.5)" />`;
+    }
+
+    lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${currentLightboxItems.length}`;
+  };
+
+  const nextLightbox = () => {
+    const vid = lightboxContent.querySelector('video');
+    if (vid) vid.pause();
+    currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxItems.length;
+    showLightboxItem();
+  };
+
+  const prevLightbox = () => {
+    const vid = lightboxContent.querySelector('video');
+    if (vid) vid.pause();
+    currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxItems.length) % currentLightboxItems.length;
+    showLightboxItem();
+  };
+
+  // Click handlers
+  galleryItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      // Don't open lightbox if clicking video controls
+      if (e.target.tagName === 'VIDEO') return;
+      openLightbox(item);
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightboxPrev) lightboxPrev.addEventListener('click', prevLightbox);
+  if (lightboxNext) lightboxNext.addEventListener('click', nextLightbox);
+
+  // Close on overlay click
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  // Keyboard support — update existing Escape handler
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox || !lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextLightbox();
+    if (e.key === 'ArrowLeft') prevLightbox();
+  });
+
 });
