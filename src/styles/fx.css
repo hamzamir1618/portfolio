@@ -1,0 +1,106 @@
+/* ============================================================
+   FX layer — transition overlays (desktop "full" mode only)
+   ============================================================ */
+
+.fx { position: fixed; inset: 0; z-index: 500; pointer-events: none; }
+.fx > * { position: absolute; inset: 0; visibility: hidden; }
+.fx > .is-on { visibility: visible; }
+.fx canvas { width: 100%; height: 100%; display: block; }
+
+/* ---------- Page turn ---------- */
+.peel__shade, .peel__sheen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+.peel__shade { background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.12) 90px, transparent 260px); }
+.peel__flapwrap { position: absolute; inset: 0; filter: drop-shadow(-14px 10px 22px rgba(0, 0, 0, 0.35)); }
+.peel__flap { position: absolute; inset: 0; overflow: hidden; }
+.peel__back { position: absolute; top: 0; left: 0; transform-origin: 0 0; }
+.peel__sheen {
+  background: linear-gradient(90deg,
+    rgba(0, 0, 0, 0.32) 0,
+    rgba(255, 255, 255, 0.55) 18px,
+    rgba(255, 255, 255, 0.12) 90px,
+    rgba(0, 0, 0, 0) 220px,
+    rgba(0, 0, 0, 0.16) 70%);
+}
+
+/* ---------- Panel dive: focus lines rush past ---------- */
+.dive__lines {
+  background: repeating-conic-gradient(from 0deg at 50% 50%, var(--ink) 0deg 0.6deg, transparent 0.6deg 4.2deg);
+  mask-image: radial-gradient(ellipse 34% 34% at 50% 50%, transparent 55%, #000 100%);
+  opacity: 0;
+}
+.art-speedlines-radial .dive__lines {
+  background: var(--art-speedlines-radial) center / cover;
+  mix-blend-mode: multiply;
+  mask-image: none;
+}
+
+/* ---------- SFX smash: katakana impact over a burst ---------- */
+.sfx { display: grid; place-items: center; }
+.sfx__burst {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 84vmin;
+  height: 84vmin;
+  margin: -42vmin 0 0 -42vmin;
+}
+.sfx__burst-shape {
+  --burst: polygon(50% 0%, 58% 18%, 74% 3%, 73% 25%, 96% 15%, 84% 36%, 100% 47%, 82% 56%, 95% 77%, 72% 72%, 70% 97%, 55% 80%, 40% 100%, 36% 78%, 12% 90%, 20% 67%, 0% 58%, 17% 44%, 3% 24%, 26% 26%, 24% 4%, 41% 18%);
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  clip-path: var(--burst);
+}
+.sfx__burst-shape::before {
+  content: '';
+  position: absolute;
+  inset: 3.5%;
+  background:
+    radial-gradient(circle, var(--white) 0 22%, transparent 22.5%),
+    radial-gradient(circle, rgba(0, 0, 0, 0.35) 1.8px, transparent 2.2px) 0 0 / 11px 11px,
+    var(--red);
+  clip-path: var(--burst);
+}
+.sfx__burst-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; display: none; }
+.art-burst-sfx .sfx__burst-img { display: block; }
+.art-burst-sfx .sfx__burst-shape { display: none; }
+.sfx__word {
+  position: relative;
+  font-family: var(--f-kana);
+  font-size: clamp(5rem, 13vw, 13rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  -webkit-text-stroke: 0.07em var(--white);
+  paint-order: stroke fill;
+  text-shadow: 0.06em 0.06em 0 var(--red), 0.1em 0.1em 0 var(--ink);
+  white-space: nowrap;
+}
+.sfx__word .char { display: inline-block; }
+.sfx__flash { position: absolute; inset: 0; background: var(--white); mix-blend-mode: difference; opacity: 0; }
+
+/* ---------- Nav jump: freeze-frame + "To Be Continued" ---------- */
+.jump {
+  position: fixed;
+  inset: 0;
+  z-index: 680;
+  pointer-events: none;
+  visibility: hidden;
+}
+.jump__wipe {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  clip-path: polygon(0 0, 0 0, -20% 100%, -20% 100%);
+}
+.jump__wipe .caption { font-size: clamp(1.1rem, 2vw, 1.6rem); }
+.jump .tbc-wrap { position: absolute; left: 4vw; bottom: 7vh; }
+.jump .tbc { height: 5rem; font-size: clamp(1.6rem, 2.6vw, 2.4rem); padding: 0 3rem 0 5rem; clip-path: polygon(0 50%, 3rem 0, 3rem 22%, 100% 22%, 100% 78%, 3rem 78%, 3rem 100%); }
+.book.is-frozen { filter: grayscale(1) contrast(1.15); }

@@ -1,0 +1,477 @@
+{
+  "gallery": {
+    "Digital Art/fwb_viltrumites_alt.png": {
+      "slug": "fwb-viltrumites-alt",
+      "width": 900,
+      "height": 1020,
+      "sm": "media/gallery/fwb-viltrumites-alt-sm.webp",
+      "lg": "media/gallery/fwb-viltrumites-alt-lg.webp"
+    },
+    "Digital Art/mary_final.png": {
+      "slug": "mary-final",
+      "width": 900,
+      "height": 1125,
+      "sm": "media/gallery/mary-final-sm.webp",
+      "lg": "media/gallery/mary-final-lg.webp"
+    },
+    "Digital Art/reyna.png": {
+      "slug": "reyna",
+      "width": 900,
+      "height": 1328,
+      "sm": "media/gallery/reyna-sm.webp",
+      "lg": "media/gallery/reyna-lg.webp"
+    },
+    "Digital Art/submission.png": {
+      "slug": "submission",
+      "width": 900,
+      "height": 675,
+      "sm": "media/gallery/submission-sm.webp",
+      "lg": "media/gallery/submission-lg.webp"
+    },
+    "Promotional/V.E.A.R. poster.png": {
+      "slug": "v-e-a-r-poster",
+      "width": 900,
+      "height": 1275,
+      "sm": "media/gallery/v-e-a-r-poster-sm.webp",
+      "lg": "media/gallery/v-e-a-r-poster-lg.webp"
+    },
+    "Promotional/innovation_hub poster.png": {
+      "slug": "innovation-hub-poster",
+      "width": 900,
+      "height": 1126,
+      "sm": "media/gallery/innovation-hub-poster-sm.webp",
+      "lg": "media/gallery/innovation-hub-poster-lg.webp"
+    },
+    "Promotional/poetry slam poster-2(4).png": {
+      "slug": "poetry-slam-poster-2-4",
+      "width": 900,
+      "height": 900,
+      "sm": "media/gallery/poetry-slam-poster-2-4-sm.webp",
+      "lg": "media/gallery/poetry-slam-poster-2-4-lg.webp"
+    },
+    "Promotional/AniCon Tile-2.png": {
+      "slug": "anicon-tile-2",
+      "width": 900,
+      "height": 900,
+      "sm": "media/gallery/anicon-tile-2-sm.webp",
+      "lg": "media/gallery/anicon-tile-2-lg.webp"
+    },
+    "Promotional/CRANE December Issue.png": {
+      "slug": "crane-december-issue",
+      "width": 900,
+      "height": 1273,
+      "sm": "media/gallery/crane-december-issue-sm.webp",
+      "lg": "media/gallery/crane-december-issue-lg.webp"
+    },
+    "Promotional/FLS GuestSpeakerPost.png": {
+      "slug": "fls-guestspeakerpost",
+      "width": 900,
+      "height": 900,
+      "sm": "media/gallery/fls-guestspeakerpost-sm.webp",
+      "lg": "media/gallery/fls-guestspeakerpost-lg.webp"
+    },
+    "Promotional/Recruitments.png": {
+      "slug": "recruitments",
+      "width": 900,
+      "height": 900,
+      "sm": "media/gallery/recruitments-sm.webp",
+      "lg": "media/gallery/recruitments-lg.webp"
+    },
+    "Promotional/noor amir-english post-darker text-2.png": {
+      "slug": "noor-amir-english-post-darker-text-2",
+      "width": 900,
+      "height": 900,
+      "sm": "media/gallery/noor-amir-english-post-darker-text-2-sm.webp",
+      "lg": "media/gallery/noor-amir-english-post-darker-text-2-lg.webp"
+    },
+    "Promotional/wp-poster.png": {
+      "slug": "wp-poster",
+      "width": 900,
+      "height": 541,
+      "sm": "media/gallery/wp-poster-sm.webp",
+      "lg": "media/gallery/wp-poster-lg.webp"
+    },
+    "Promotional/bootha edit-4.png": {
+      "slug": "bootha-edit-4",
+      "width": 866,
+      "height": 842,
+      "sm": "media/gallery/bootha-edit-4-sm.webp",
+      "lg": "media/gallery/bootha-edit-4-lg.webp"
+    },
+    "Promotional/birb on da crossguard (3) extended 1080x1080.png": {
+      "slug": "birb-on-da-crossguard-3-extended-1080x1080",
+      "width": 900,
+      "height": 900,
+      "sm": "media/gallery/birb-on-da-crossguard-3-extended-1080x1080-sm.webp",
+      "lg": "media/gallery/birb-on-da-crossguard-3-extended-1080x1080-lg.webp"
+    },
+    "Promotional/book club poster logo on corner and name.png": {
+      "slug": "book-club-poster-logo-on-corner-and-name",
+      "width": 900,
+      "height": 900,
+      "sm": "media/gallery/book-club-poster-logo-on-corner-and-name-sm.webp",
+      "lg": "media/gallery/book-club-poster-logo-on-corner-and-name-lg.webp"
+    },
+    "Promotional/logo ss.png": {
+      "slug": "logo-ss",
+      "width": 287,
+      "height": 147,
+      "sm": "media/gallery/logo-ss-sm.webp",
+      "lg": "media/gallery/logo-ss-lg.webp"
+    },
+    "UI-UX/Full-Homepage.png": {
+      "slug": "full-homepage",
+      "width": 900,
+      "height": 2238,
+      "sm": "media/gallery/full-homepage-sm.webp",
+      "lg": "media/gallery/full-homepage-lg.webp"
+    },
+    "UI-UX/Best-Sellers-Page.png": {
+      "slug": "best-sellers-page",
+      "width": 900,
+      "height": 2238,
+      "sm": "media/gallery/best-sellers-page-sm.webp",
+      "lg": "media/gallery/best-sellers-page-lg.webp"
+    },
+    "UI-UX/Login.png": {
+      "slug": "login",
+      "width": 900,
+      "height": 1149,
+      "sm": "media/gallery/login-sm.webp",
+      "lg": "media/gallery/login-lg.webp"
+    },
+    "UI-UX/Cart.png": {
+      "slug": "cart",
+      "width": 900,
+      "height": 1625,
+      "sm": "media/gallery/cart-sm.webp",
+      "lg": "media/gallery/cart-lg.webp"
+    },
+    "UI-UX/Checkout.png": {
+      "slug": "checkout",
+      "width": 900,
+      "height": 1625,
+      "sm": "media/gallery/checkout-sm.webp",
+      "lg": "media/gallery/checkout-lg.webp"
+    },
+    "UI-UX/Signup-1.png": {
+      "slug": "signup-1",
+      "width": 900,
+      "height": 1513,
+      "sm": "media/gallery/signup-1-sm.webp",
+      "lg": "media/gallery/signup-1-lg.webp"
+    },
+    "UI-UX/Signup-2.png": {
+      "slug": "signup-2",
+      "width": 900,
+      "height": 1311,
+      "sm": "media/gallery/signup-2-sm.webp",
+      "lg": "media/gallery/signup-2-lg.webp"
+    },
+    "UI-UX/Home_HF.png": {
+      "slug": "home-hf",
+      "width": 440,
+      "height": 956,
+      "sm": "media/gallery/home-hf-sm.webp",
+      "lg": "media/gallery/home-hf-lg.webp"
+    },
+    "UI-UX/Menu_HF.png": {
+      "slug": "menu-hf",
+      "width": 440,
+      "height": 956,
+      "sm": "media/gallery/menu-hf-sm.webp",
+      "lg": "media/gallery/menu-hf-lg.webp"
+    },
+    "UI-UX/Calming Screen_HF.png": {
+      "slug": "calming-screen-hf",
+      "width": 440,
+      "height": 956,
+      "sm": "media/gallery/calming-screen-hf-sm.webp",
+      "lg": "media/gallery/calming-screen-hf-lg.webp"
+    },
+    "UI-UX/Items in Cart_HF.png": {
+      "slug": "items-in-cart-hf",
+      "width": 440,
+      "height": 956,
+      "sm": "media/gallery/items-in-cart-hf-sm.webp",
+      "lg": "media/gallery/items-in-cart-hf-lg.webp"
+    },
+    "UI-UX/Order Confirmation_HF.png": {
+      "slug": "order-confirmation-hf",
+      "width": 440,
+      "height": 956,
+      "sm": "media/gallery/order-confirmation-hf-sm.webp",
+      "lg": "media/gallery/order-confirmation-hf-lg.webp"
+    },
+    "UI-UX/Track Progress_HF.png": {
+      "slug": "track-progress-hf",
+      "width": 440,
+      "height": 956,
+      "sm": "media/gallery/track-progress-hf-sm.webp",
+      "lg": "media/gallery/track-progress-hf-lg.webp"
+    },
+    "Sketches/armor design w chainmail.JPG": {
+      "slug": "armor-design-w-chainmail",
+      "width": 900,
+      "height": 1200,
+      "sm": "media/gallery/armor-design-w-chainmail-sm.webp",
+      "lg": "media/gallery/armor-design-w-chainmail-lg.webp"
+    },
+    "Sketches/armor design.JPG": {
+      "slug": "armor-design",
+      "width": 900,
+      "height": 1200,
+      "sm": "media/gallery/armor-design-sm.webp",
+      "lg": "media/gallery/armor-design-lg.webp"
+    },
+    "Sketches/containment suit design.JPG": {
+      "slug": "containment-suit-design",
+      "width": 900,
+      "height": 1200,
+      "sm": "media/gallery/containment-suit-design-sm.webp",
+      "lg": "media/gallery/containment-suit-design-lg.webp"
+    },
+    "Sketches/suit design.JPG": {
+      "slug": "suit-design",
+      "width": 900,
+      "height": 1200,
+      "sm": "media/gallery/suit-design-sm.webp",
+      "lg": "media/gallery/suit-design-lg.webp"
+    },
+    "Game Design/pacman assembly demo.mp4": {
+      "slug": "pacman-assembly-demo",
+      "width": 848,
+      "height": 480,
+      "video": "media/video/pacman-assembly-demo.mp4",
+      "poster": "media/video/pacman-assembly-demo.webp"
+    },
+    "Game Design/spaceshooter demo.mp4": {
+      "slug": "spaceshooter-demo",
+      "width": 900,
+      "height": 812,
+      "video": "media/video/spaceshooter-demo.mp4",
+      "poster": "media/video/spaceshooter-demo.webp"
+    },
+    "MS Paint (old)/Blue Knight.png": {
+      "slug": "blue-knight",
+      "width": 900,
+      "height": 539,
+      "sm": "media/gallery/blue-knight-sm.webp",
+      "lg": "media/gallery/blue-knight-lg.webp"
+    },
+    "MS Paint (old)/Ciro.png": {
+      "slug": "ciro",
+      "width": 900,
+      "height": 714,
+      "sm": "media/gallery/ciro-sm.webp",
+      "lg": "media/gallery/ciro-lg.webp"
+    },
+    "MS Paint (old)/DEUS-X.png": {
+      "slug": "deus-x",
+      "width": 900,
+      "height": 510,
+      "sm": "media/gallery/deus-x-sm.webp",
+      "lg": "media/gallery/deus-x-lg.webp"
+    },
+    "MS Paint (old)/Dark Crusader mask.png": {
+      "slug": "dark-crusader-mask",
+      "width": 900,
+      "height": 815,
+      "sm": "media/gallery/dark-crusader-mask-sm.webp",
+      "lg": "media/gallery/dark-crusader-mask-lg.webp"
+    },
+    "MS Paint (old)/Dead Zone.png": {
+      "slug": "dead-zone",
+      "width": 900,
+      "height": 714,
+      "sm": "media/gallery/dead-zone-sm.webp",
+      "lg": "media/gallery/dead-zone-lg.webp"
+    },
+    "MS Paint (old)/Kid Muscle UH.png": {
+      "slug": "kid-muscle-uh",
+      "width": 900,
+      "height": 717,
+      "sm": "media/gallery/kid-muscle-uh-sm.webp",
+      "lg": "media/gallery/kid-muscle-uh-lg.webp"
+    },
+    "MS Paint (old)/Law.png": {
+      "slug": "law",
+      "width": 900,
+      "height": 864,
+      "sm": "media/gallery/law-sm.webp",
+      "lg": "media/gallery/law-lg.webp"
+    },
+    "MS Paint (old)/Muscle Brain.png": {
+      "slug": "muscle-brain",
+      "width": 900,
+      "height": 1184,
+      "sm": "media/gallery/muscle-brain-sm.webp",
+      "lg": "media/gallery/muscle-brain-lg.webp"
+    },
+    "MS Paint (old)/My Future Ninja Suit.png": {
+      "slug": "my-future-ninja-suit",
+      "width": 900,
+      "height": 624,
+      "sm": "media/gallery/my-future-ninja-suit-sm.webp",
+      "lg": "media/gallery/my-future-ninja-suit-lg.webp"
+    },
+    "MS Paint (old)/Red Lightning.png": {
+      "slug": "red-lightning",
+      "width": 900,
+      "height": 1184,
+      "sm": "media/gallery/red-lightning-sm.webp",
+      "lg": "media/gallery/red-lightning-lg.webp"
+    },
+    "MS Paint (old)/RukAng.png": {
+      "slug": "rukang",
+      "width": 900,
+      "height": 624,
+      "sm": "media/gallery/rukang-sm.webp",
+      "lg": "media/gallery/rukang-lg.webp"
+    },
+    "MS Paint (old)/Silver Knight.png": {
+      "slug": "silver-knight",
+      "width": 900,
+      "height": 875,
+      "sm": "media/gallery/silver-knight-sm.webp",
+      "lg": "media/gallery/silver-knight-lg.webp"
+    },
+    "MS Paint (old)/Ultimatus.png": {
+      "slug": "ultimatus",
+      "width": 900,
+      "height": 607,
+      "sm": "media/gallery/ultimatus-sm.webp",
+      "lg": "media/gallery/ultimatus-lg.webp"
+    },
+    "MS Paint (old)/White Knight.png": {
+      "slug": "white-knight",
+      "width": 900,
+      "height": 616,
+      "sm": "media/gallery/white-knight-sm.webp",
+      "lg": "media/gallery/white-knight-lg.webp"
+    },
+    "MS Paint (old)/osiris.png": {
+      "slug": "osiris",
+      "width": 900,
+      "height": 1667,
+      "sm": "media/gallery/osiris-sm.webp",
+      "lg": "media/gallery/osiris-lg.webp"
+    },
+    "Video Edits/book friend promo reel draft.mp4": {
+      "slug": "book-friend-promo-reel-draft",
+      "width": 900,
+      "height": 1600,
+      "video": "media/video/book-friend-promo-reel-draft.mp4",
+      "poster": "media/video/book-friend-promo-reel-draft.webp"
+    },
+    "Video Edits/FwB Sticker Recreation.mp4": {
+      "slug": "fwb-sticker-recreation",
+      "width": 900,
+      "height": 1200,
+      "video": "media/video/fwb-sticker-recreation.mp4",
+      "poster": "media/video/fwb-sticker-recreation.webp"
+    }
+  },
+  "art": {
+    "paper-grain": {
+      "src": "art/paper-grain.webp",
+      "width": 1024,
+      "height": 1024
+    },
+    "paper-back": {
+      "src": "art/paper-back.webp",
+      "width": 2400,
+      "height": 1340
+    },
+    "ink-splat-01": {
+      "src": "art/ink-splat-01.webp",
+      "width": 1600,
+      "height": 1600
+    },
+    "ink-splat-02": {
+      "src": "art/ink-splat-02.webp",
+      "width": 1600,
+      "height": 1600
+    },
+    "ink-splat-03": {
+      "src": "art/ink-splat-03.webp",
+      "width": 1600,
+      "height": 1600
+    },
+    "ink-splat-04": {
+      "src": "art/ink-splat-04.webp",
+      "width": 1600,
+      "height": 1600
+    },
+    "ink-splat-05": {
+      "src": "art/ink-splat-05.webp",
+      "width": 1600,
+      "height": 1600
+    },
+    "burst-sfx": {
+      "src": "art/burst-sfx.webp",
+      "width": 1600,
+      "height": 1600
+    },
+    "speedlines-radial": {
+      "src": "art/speedlines-radial.webp",
+      "width": 2400,
+      "height": 1340
+    },
+    "cover-islamabad": {
+      "src": "art/cover-islamabad.webp",
+      "width": 2752,
+      "height": 1536
+    },
+    "og-cover": {
+      "src": "art/og-cover.jpg",
+      "width": 1200,
+      "height": 670
+    },
+    "ch1-origin": {
+      "src": "art/ch1-origin.webp",
+      "width": 1400,
+      "height": 1875
+    },
+    "ch2-journey": {
+      "src": "art/ch2-journey.webp",
+      "width": 2752,
+      "height": 1536
+    },
+    "exp-kdd": {
+      "src": "art/exp-kdd.webp",
+      "width": 1600,
+      "height": 1130
+    },
+    "exp-mlabs": {
+      "src": "art/exp-mlabs.webp",
+      "width": 1600,
+      "height": 1117
+    },
+    "exp-societies": {
+      "src": "art/exp-societies.webp",
+      "width": 1600,
+      "height": 1195
+    },
+    "ch3-arsenal": {
+      "src": "art/ch3-arsenal.webp",
+      "width": 2545,
+      "height": 1332
+    },
+    "ch4-powers": {
+      "src": "art/ch4-powers.webp",
+      "width": 1000,
+      "height": 1103
+    },
+    "epilogue-signal": {
+      "src": "art/epilogue-signal.webp",
+      "width": 2445,
+      "height": 1353
+    },
+    "back-cover": {
+      "src": "art/back-cover.webp",
+      "width": 2592,
+      "height": 1391
+    }
+  }
+}

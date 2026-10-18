@@ -1,0 +1,331 @@
+/* ============================================================
+   PART 1 — base: tokens, reset, type, manga page furniture
+   Traditional comic / JoJo: heavy ink, screentone, slanted
+   panels, menacing SFX. Palette: paper / black ink / red only.
+   ============================================================ */
+
+:root {
+  --paper: #f5f5f0;
+  --paper-2: #eeeee8;
+  --white: #ffffff;
+  --ink: #111111;
+  --ink-2: #333333;
+  --ink-3: #666666;
+  --ink-4: #999999;
+  --red: #e00b25;
+  --red-deep: #b80820;
+  --caption: #fffde0;
+
+  --f-mega: 'Anybody', 'Arial Black', sans-serif;
+  --f-display: 'Bebas Neue', 'Impact', sans-serif;
+  --f-kana: 'Dela Gothic One', 'Arial Black', sans-serif;
+  --f-letter: 'Comic Neue', 'Comic Sans MS', sans-serif;
+  --f-body: 'Inter', system-ui, sans-serif;
+
+  --line: 3px solid var(--ink);
+  --line-thin: 2px solid var(--ink);
+  --slam: 6px 6px 0 var(--ink);
+  --slam-red: 6px 6px 0 var(--red);
+
+  /* Screentone, reusable as a background layer */
+  --tone: radial-gradient(circle, var(--ink) 1px, transparent 1.3px) 0 0 / 6px 6px;
+  --tone-red: radial-gradient(circle, var(--red) 1.6px, transparent 1.9px) 0 0 / 9px 9px;
+
+  --wrap: min(100% - 3rem, 1240px);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-snap: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  overflow-x: clip;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ink) var(--paper);
+}
+
+body {
+  font-family: var(--f-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+img, video, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul, ol { list-style: none; }
+strong { font-weight: 700; color: var(--ink); }
+[hidden] { display: none !important; }
+
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+::selection { background: var(--red); color: var(--white); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.wrap { width: var(--wrap); margin-inline: auto; position: relative; }
+
+/* ---------- Print grain: art if supplied, fine screentone fallback ---------- */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 700;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1.2px);
+  background-size: 4px 4px;
+}
+.art-paper-grain .grain { opacity: 0.85; background-image: var(--art-paper-grain); background-size: 512px 512px; }
+
+/* ---------- Scenes ---------- */
+.scene {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--paper);
+}
+.scene__inner { position: relative; min-height: inherit; }
+.scene-gap { pointer-events: none; }
+
+/* ---------- Focus lines (radial speed lines) ---------- */
+.focus-lines {
+  position: absolute;
+  inset: -30%;
+  pointer-events: none;
+  background: repeating-conic-gradient(from 0deg at var(--fx, 50%) var(--fy, 50%), var(--ink) 0deg 0.7deg, transparent 0.7deg 3.4deg);
+  mask-image: radial-gradient(circle at var(--fx, 50%) var(--fy, 50%), transparent 18%, #000 55%);
+  opacity: 0.12;
+}
+
+/* ---------- Chapter headings (kinetic type targets) ---------- */
+.chapter-head { position: relative; padding-top: clamp(6rem, 14vh, 9rem); margin-bottom: clamp(2rem, 5vh, 3.5rem); }
+
+.chapter-label {
+  display: inline-block;
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--ink);
+  padding: 0.25rem 1rem 0.15rem;
+  transform: skewX(-12deg);
+  margin-bottom: 0.9rem;
+  box-shadow: 4px 4px 0 var(--red);
+}
+
+.chapter-title {
+  font-family: var(--f-mega);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(3.4rem, 9vw, 9rem);
+  line-height: 0.86;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+  text-shadow: 0.05em 0.05em 0 var(--red);
+}
+.chapter-title em { font-style: italic; color: var(--red); text-shadow: 0.05em 0.05em 0 var(--ink); }
+.chapter-title .char {
+  display: inline-block;
+  font-variation-settings: 'wdth' var(--wdth, 100), 'wght' var(--wght, 900);
+  will-change: transform;
+}
+
+.chapter-aside {
+  font-family: var(--f-letter);
+  font-weight: 700;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+  margin-top: 1rem;
+  max-width: 34rem;
+}
+
+/* ---------- Menacing SFX (ゴゴゴゴ / ドドドド) ---------- */
+.menace {
+  position: absolute;
+  display: flex;
+  gap: 0.05em;
+  pointer-events: none;
+  font-family: var(--f-kana);
+  font-size: clamp(2.2rem, 4.6vw, 4.4rem);
+  line-height: 1;
+  color: var(--ink);
+  -webkit-text-stroke: 0.06em var(--white);
+  paint-order: stroke fill;
+  text-shadow: 0.06em 0.06em 0 var(--red);
+  z-index: 4;
+}
+.menace span { display: inline-block; will-change: transform; }
+.menace--head { right: 4%; top: clamp(6rem, 14vh, 9rem); rotate: -8deg; }
+
+/* ---------- Narration caption (manga narration box) ---------- */
+.caption {
+  display: inline-block;
+  position: relative;
+  font-family: var(--f-letter);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+  line-height: 1.45;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  background: var(--white);
+  border: var(--line-thin);
+  padding: 0.7rem 1rem;
+  max-width: 36rem;
+}
+.caption strong { color: var(--red); }
+.caption--small { font-size: 0.95rem; padding: 0.45rem 0.8rem; }
+
+/* ---------- Panels ---------- */
+.panel {
+  position: relative;
+  background: var(--white);
+  border: var(--line);
+}
+.panel--art {
+  background-color: var(--paper-2);
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Speech balloon ---------- */
+.bubble {
+  position: relative;
+  background: var(--white);
+  border: var(--line);
+  border-radius: 50%;
+  padding: 2.6rem 3rem;
+  font-family: var(--f-letter);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.55;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--ink);
+}
+.bubble strong { color: var(--red); }
+.bubble::before, .bubble::after {
+  content: '';
+  position: absolute;
+  left: 22%;
+  border-style: solid;
+}
+.bubble::before { bottom: -30px; border-width: 32px 6px 0 22px; border-color: var(--ink) transparent transparent transparent; }
+.bubble::after { bottom: -24px; left: calc(22% + 3px); border-width: 26px 4px 0 17px; border-color: var(--white) transparent transparent transparent; }
+
+/* ---------- Shout balloon (jagged) ---------- */
+.shout {
+  --jag: polygon(0% 22%, 10% 18%, 8% 4%, 22% 12%, 32% 0%, 40% 12%, 54% 2%, 60% 14%, 76% 4%, 78% 18%, 96% 10%, 90% 30%, 100% 42%, 90% 54%, 100% 70%, 86% 74%, 92% 94%, 72% 84%, 62% 100%, 52% 86%, 36% 98%, 30% 84%, 12% 94%, 14% 76%, 0% 72%, 8% 54%, 0% 40%, 10% 32%);
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 9.5rem;
+  aspect-ratio: 1.35;
+  padding: 1.6rem;
+  font-family: var(--f-mega);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.05rem;
+  line-height: 0.95;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--ink);
+  clip-path: var(--jag);
+  isolation: isolate;
+}
+.shout::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: var(--white);
+  clip-path: var(--jag);
+  z-index: -1;
+}
+
+/* ---------- Buttons: slanted ink blocks ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--f-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.9rem 0.65rem;
+  border: var(--line);
+  transform: skewX(-10deg);
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), background 0.2s, color 0.2s;
+}
+.btn svg { width: 18px; height: 18px; }
+.btn--red { background: var(--red); color: var(--white); box-shadow: var(--slam); }
+.btn--paper { background: var(--white); color: var(--ink); box-shadow: var(--slam-red); }
+.btn:hover { transform: skewX(-10deg) translate(-3px, -3px); }
+.btn--red:hover { box-shadow: 9px 9px 0 var(--ink); }
+.btn--paper:hover { background: var(--ink); color: var(--white); box-shadow: 9px 9px 0 var(--red); }
+.btn:active { transform: skewX(-10deg) translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+.btn--big { width: 100%; padding: 1.1rem 2rem 1rem; font-size: 1.4rem; }
+
+/* ---------- Filters ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; }
+.filter {
+  font-family: var(--f-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 1.2rem 0.25rem;
+  background: var(--white);
+  border: var(--line-thin);
+  color: var(--ink-3);
+  transform: skewX(-10deg);
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.filter:hover { color: var(--ink); transform: skewX(-10deg) translate(-2px, -2px); box-shadow: 3px 3px 0 var(--ink); }
+.filter.is-active { background: var(--ink); color: var(--white); box-shadow: 4px 4px 0 var(--red); }
+
+/* ---------- "To Be Continued" arrow ---------- */
+.tbc {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 4.2rem;
+  padding: 0 2.4rem 0 4.4rem;
+  font-family: var(--f-mega);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.7rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--ink);
+  clip-path: polygon(0 50%, 2.6rem 0, 2.6rem 22%, 100% 22%, 100% 78%, 2.6rem 78%, 2.6rem 100%);
+  white-space: nowrap;
+}
+.tbc-wrap { display: inline-block; filter: drop-shadow(5px 5px 0 var(--red)); }
+
+/* ---------- Ribbon band (marquee) ---------- */
+.marquee {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+}
+.marquee span { display: block; }
+
+/* ---------- Kinetic helpers ---------- */
+.char, .word { display: inline-block; }
+[data-words-pop] .word { will-change: transform, opacity; }

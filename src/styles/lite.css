@@ -1,0 +1,126 @@
+/* ============================================================
+   Lite mode (phones, tablets, reduced motion) — deliberately
+   simpler: no pinning, no transition stage, stacked layouts.
+   ============================================================ */
+
+.mode-lite .hero, .mode-still .hero, .no-js .hero { height: auto; min-height: 100svh; }
+.mode-lite .hero__inner, .mode-still .hero__inner, .no-js .hero__inner { min-height: 100svh; }
+
+/* Cover reflows into a column below the full-desktop breakpoint */
+.mode-lite .hero__trim, .mode-still .hero__trim, .no-js .hero__trim {
+  position: relative;
+  inset: auto;
+  margin: 4.4rem 0.75rem 0.75rem;
+  min-height: calc(100svh - 5.2rem);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 6rem;
+}
+.mode-lite .hero__corner, .mode-still .hero__corner, .no-js .hero__corner { width: 4.6rem; padding: 0.4rem 0.3rem 0.5rem; }
+.mode-lite .hero__corner-no b, .mode-still .hero__corner-no b, .no-js .hero__corner-no b { font-size: 2.4rem; }
+.mode-lite .hero__presents, .mode-still .hero__presents, .no-js .hero__presents { position: static; margin-left: 4.6rem; font-size: 0.95rem; min-height: 5.4rem; }
+.mode-lite .hero__mast, .mode-still .hero__mast, .no-js .hero__mast { position: static; margin-top: 0.5rem; }
+.mode-lite .hero__mast-line--1, .mode-still .hero__mast-line--1, .no-js .hero__mast-line--1 { font-size: 15vw; }
+.mode-lite .hero__mast-line--2, .mode-still .hero__mast-line--2, .no-js .hero__mast-line--2 { font-size: 7.6vw; }
+.mode-lite .hero__portrait, .mode-still .hero__portrait, .no-js .hero__portrait {
+  position: relative;
+  inset: auto;
+  height: auto;
+  width: min(72%, 340px);
+  margin: 1.5rem auto 1.5rem;
+}
+.mode-lite .hero__portrait-frame, .mode-still .hero__portrait-frame, .no-js .hero__portrait-frame { position: relative; aspect-ratio: 3 / 4; }
+.mode-lite .hero__copy, .mode-still .hero__copy, .no-js .hero__copy { position: static; width: auto; order: 5; }
+.mode-lite .hero__band, .mode-still .hero__band, .no-js .hero__band { bottom: 1.25rem; }
+.mode-lite .hero__dogear, .mode-still .hero__dogear, .no-js .hero__dogear { display: none; }
+.mode-lite .hero__sun, .mode-still .hero__sun, .no-js .hero__sun { display: none; }
+.mode-lite .hero__portrait::before, .mode-still .hero__portrait::before, .no-js .hero__portrait::before {
+  content: '';
+  position: absolute;
+  inset: -7% -22%;
+  z-index: -1;
+  background: var(--tone-red), var(--red);
+  background-blend-mode: multiply;
+  clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+}
+.mode-lite .hero__kana, .mode-still .hero__kana, .no-js .hero__kana { font-size: 1rem; top: 6.4rem; right: 0.5rem; padding: 0.7rem 0.35rem 0.9rem; }
+.mode-lite .menace--hero, .mode-still .menace--hero, .no-js .menace--hero { display: none; }
+.mode-lite .menace--head, .mode-still .menace--head { font-size: 1.8rem; top: 4.5rem; }
+
+.mode-lite .about__page, .mode-still .about__page, .no-js .about__page { grid-template-columns: 1fr; }
+.mode-lite .about__page > *, .mode-still .about__page > *, .no-js .about__page > * { grid-column: 1 / -1; grid-row: auto; }
+.mode-lite .about__art, .mode-still .about__art, .no-js .about__art { min-height: 24rem; rotate: 0deg; }
+.mode-lite .about__stats, .mode-still .about__stats { gap: 0.75rem; }
+.mode-lite .about__finale, .mode-still .about__finale, .no-js .about__finale { display: none; }
+
+.mode-lite .exp__stage, .mode-still .exp__stage, .no-js .exp__stage { height: auto; overflow: visible; }
+.mode-lite .exp__track, .mode-still .exp__track, .no-js .exp__track { flex-direction: column; width: auto; padding: 0 0.75rem 4rem; gap: 2.5rem; }
+.mode-lite .exp-card--title, .mode-still .exp-card--title, .no-js .exp-card--title { width: calc(100% + 1.5rem); margin-inline: -0.75rem; height: 80svh; }
+.mode-lite .exp-card--job, .mode-still .exp-card--job, .no-js .exp-card--job { width: 100%; height: auto; margin: 0; grid-template-columns: 1fr; }
+.mode-lite .exp-card__art, .mode-still .exp-card__art, .no-js .exp-card__art { order: 0 !important; min-height: 13rem; border: 0 !important; border-bottom: 4px solid var(--ink) !important; margin: 9px 9px 0 !important; }
+.mode-lite .exp-card__year, .mode-still .exp-card__year, .no-js .exp-card__year { top: 8.6rem; bottom: auto; font-size: 4.6rem; }
+.mode-lite .exp-gutter, .mode-still .exp-gutter, .no-js .exp-gutter { width: auto; }
+.mode-lite .exp-card--end, .mode-still .exp-card--end, .no-js .exp-card--end { width: auto; padding: 3rem 0; }
+.mode-lite .exp__progress, .mode-still .exp__progress, .no-js .exp__progress { display: none; }
+.mode-lite .exp-card__notes li:nth-child(2) { margin-left: 0; }
+
+.mode-lite .dossier, .mode-still .dossier { grid-template-columns: 1fr; }
+.mode-lite .dossier__card, .mode-still .dossier__card { max-width: 360px; }
+
+.mode-lite .comic-grid, .mode-still .comic-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 54px; gap: 10px; }
+.mode-lite .tile__label, .mode-still .tile__label { transform: none; font-size: 0.85rem; padding: 0.3rem 0.5rem 0.2rem; }
+.mode-lite .tile__label small, .mode-still .tile__label small { display: none; }
+
+.mode-lite .contact__grid, .mode-still .contact__grid { grid-template-columns: 1fr; }
+.mode-lite .contact__wrap, .mode-still .contact__wrap { padding-bottom: 3rem; }
+
+/* Lite-mode chapter gutters (inserted by JS between scenes) */
+.lite-gutter {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 7.5rem;
+  background: var(--ink);
+  border-block: var(--line);
+  overflow: hidden;
+}
+.lite-gutter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, var(--red) 1.4px, transparent 1.7px) 0 0 / 8px 8px;
+  mask-image: radial-gradient(ellipse at 50% 50%, transparent 30%, #000 80%);
+}
+.lite-gutter .caption { position: relative; }
+
+@media (max-width: 1100px) {
+  .powers { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .chapter-title { font-size: clamp(2.2rem, 10vw, 3rem); }
+  .exp-card__titlewrap .chapter-title { font-size: clamp(2.6rem, 12.5vw, 3.6rem); }
+  .exp-card__titlewrap { padding-inline: 1.25rem; }
+  .signal { font-size: clamp(3rem, 15vw, 4.2rem); }
+  .tbc { font-size: 1.2rem; height: 3.4rem; padding: 0 1.4rem 0 3.4rem; }
+  .exp-card--end .tbc { font-size: 1.4rem; height: 3.8rem; padding: 0 1.6rem 0 3.8rem; }
+  .exp-card__next-title { font-size: 12vw; }
+  .topbar__chapter, .topbar__menu-label { display: none; }
+  .topbar { padding: 0.75rem; }
+  .chapter-head { padding-top: 5.5rem; }
+  .about__p1 { padding: 1.25rem; }
+  .about__p1 .caption--top { margin: -2.6rem 0 1rem -0.25rem; }
+  .about__p2 .caption--offset { justify-self: start; }
+  .stat__label { font-size: 0.8rem; letter-spacing: 0.1em; }
+  .contents__list a { gap: 0.75rem; }
+  .footer__row { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .dossier__facts div { grid-template-columns: 6.5rem 1fr; }
+  .lightbox__prev, .lightbox__next { top: auto; bottom: 3.5rem; translate: none; }
+}
+
+/* Reduced motion: nothing moves on its own */
+.mode-still *, .mode-still *::before, .mode-still *::after { animation: none !important; transition-duration: 0.01ms !important; }
+
+/* Phones: the cover art lives in the slanted band behind the portrait, text stays on white */
+.mode-lite.art-cover-islamabad .hero__backdrop, .mode-still.art-cover-islamabad .hero__backdrop { background: var(--white); }
+.mode-lite.art-cover-islamabad .hero__portrait::before, .mode-still.art-cover-islamabad .hero__portrait::before { background: var(--art-cover-islamabad) 58% 40% / cover; }
+.mode-lite.art-cover-islamabad .hero__portrait, .mode-still.art-cover-islamabad .hero__portrait { inset: auto; height: auto; rotate: -3deg; }

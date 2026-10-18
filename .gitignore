@@ -1,3 +1,7 @@
 *.zip
 *.mp4
-
+!public/media/video/*.mp4
+node_modules/
+dist/
+# Source art: the converted copies in public/art are what ships
+art-source/assets/
