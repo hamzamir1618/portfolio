@@ -136,14 +136,15 @@
   font-family: var(--f-mega);
   font-style: italic;
   font-weight: 900;
-  font-size: clamp(1.6rem, 3vw, 2.8rem);
-  font-variation-settings: 'wdth' 110;
+  font-size: clamp(1.25rem, 2.2vw, 2.35rem);
+  font-variation-settings: 'wdth' 102;
+  white-space: nowrap;
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 1.1rem;
 }
 .hero__tagline-pre { font-family: var(--f-display); font-style: normal; font-weight: 400; font-size: 0.7em; letter-spacing: 0.1em; color: var(--ink-3); }
-.flipword { position: relative; display: inline-block; color: var(--red); perspective: 600px; text-shadow: 0.05em 0.05em 0 var(--ink); }
+.flipword { position: relative; display: inline-block; white-space: nowrap; color: var(--red); perspective: 600px; text-shadow: 0.05em 0.05em 0 var(--ink); }
 .flipword .char { display: inline-block; transform-origin: 50% 100%; backface-visibility: hidden; }
 .hero__caption { margin-bottom: 1.6rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 1.2rem; }
