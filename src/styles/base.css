@@ -296,6 +296,24 @@ strong { font-weight: 700; color: var(--ink); }
 }
 .filter:hover { color: var(--ink); transform: skewX(-10deg) translate(-2px, -2px); box-shadow: 3px 3px 0 var(--ink); }
 .filter.is-active { background: var(--ink); color: var(--white); box-shadow: 4px 4px 0 var(--red); }
+.filter--frontends {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: 0.35rem;
+  border-color: var(--ink);
+  color: var(--ink);
+  box-shadow: 3px 3px 0 var(--red);
+}
+.filter__badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 0.12rem 0.38rem 0.06rem;
+  background: var(--red);
+  color: var(--white);
+}
+.filter--frontends.is-active .filter__badge { background: var(--white); color: var(--ink); }
 
 /* ---------- "To Be Continued" arrow ---------- */
 .tbc {

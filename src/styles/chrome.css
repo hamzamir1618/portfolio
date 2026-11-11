@@ -285,6 +285,240 @@
 .lightbox__prev { left: 1.25rem; top: 50%; translate: 0 -50%; }
 .lightbox__next { right: 1.25rem; top: 50%; translate: 0 -50%; }
 
+/* ---------- Interactive Frontend Preview Modal ---------- */
+.preview {
+  position: fixed;
+  inset: 0;
+  z-index: 860;
+  display: grid;
+  place-items: center;
+  padding: clamp(0.5rem, 2vw, 1.5rem);
+}
+.preview__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.86);
+  backdrop-filter: blur(3px);
+}
+.preview__shell {
+  position: relative;
+  z-index: 1;
+  width: min(1360px, 96vw);
+  height: min(880px, 92vh);
+  height: min(880px, 92svh);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--paper);
+  border: 4px solid var(--ink);
+  box-shadow: 12px 12px 0 var(--red);
+  overflow: hidden;
+}
+.preview__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  background: var(--ink);
+  color: var(--white);
+  border-bottom: 4px solid var(--ink);
+}
+.preview__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+.preview__badge {
+  font-family: var(--f-display);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  background: var(--red);
+  color: var(--white);
+  padding: 0.1rem 0.55rem 0;
+  transform: skewX(-10deg);
+  flex-shrink: 0;
+}
+.preview__title {
+  font-family: var(--f-mega);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  text-transform: uppercase;
+  font-variation-settings: 'wdth' 110;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.preview__url {
+  font-family: var(--f-body);
+  font-size: 0.78rem;
+  color: var(--ink-4);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15rem 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  white-space: nowrap;
+}
+.preview__controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+.preview__nav {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--white);
+  background: var(--ink-2);
+  transform: skewX(-8deg);
+}
+.preview__btn {
+  width: 2rem;
+  height: 1.9rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--white);
+  transition: background 0.2s;
+}
+.preview__btn:hover { background: var(--red); }
+.preview__count {
+  font-family: var(--f-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  padding: 0.1rem 0.55rem 0;
+  border-inline: 1px solid rgba(255, 255, 255, 0.25);
+}
+.preview__viewport {
+  display: inline-flex;
+  border: 2px solid var(--white);
+  background: var(--ink-2);
+  transform: skewX(-8deg);
+}
+.preview__vp {
+  font-family: var(--f-display);
+  font-size: 0.92rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem 0.1rem;
+  color: var(--ink-4);
+  transition: background 0.2s, color 0.2s;
+}
+.preview__vp:hover { color: var(--white); }
+.preview__vp.is-active { background: var(--white); color: var(--ink); }
+.preview__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--f-display);
+  font-size: 0.98rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.75rem 0.12rem;
+  border: 2px solid var(--white);
+  background: transparent;
+  color: var(--white);
+  transform: skewX(-8deg);
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.preview__action svg { width: 15px; height: 15px; }
+.preview__action:hover { background: var(--white); color: var(--ink); transform: skewX(-8deg) translate(-1px, -1px); }
+.preview__action--primary {
+  background: var(--red);
+  border-color: var(--red);
+}
+.preview__action--primary:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink);
+}
+.preview__close {
+  width: 2.1rem;
+  height: 2.1rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.05rem;
+  color: var(--white);
+  border: 2px solid var(--white);
+  background: var(--ink-2);
+  transition: background 0.2s, border-color 0.2s;
+}
+.preview__close:hover { background: var(--red); border-color: var(--red); }
+.preview__stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle, rgba(0, 0, 0, 0.18) 1.3px, transparent 1.6px) 0 0 / 8px 8px,
+    var(--paper-2);
+  overflow: hidden;
+}
+.preview__frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--white);
+  transition: width 0.35s var(--ease-out), height 0.35s var(--ease-out), box-shadow 0.35s, border 0.2s;
+}
+.preview__shell.is-mobile .preview__frame {
+  width: min(390px, 94%);
+  height: min(780px, 94%);
+  border: 4px solid var(--ink);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+.preview__loader {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0.85rem;
+  background: var(--paper);
+  transition: opacity 0.3s var(--ease-out), visibility 0.3s;
+}
+.preview__loader.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.preview__loader-text {
+  font-family: var(--f-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.preview__loader-bar {
+  width: min(240px, 60vw);
+  height: 8px;
+  border: 2px solid var(--ink);
+  background: var(--white);
+  transform: skewX(-16deg);
+  overflow: hidden;
+}
+.preview__loader-bar span {
+  display: block;
+  width: 45%;
+  height: 100%;
+  background: var(--red);
+  animation: preview-load 1.1s ease-in-out infinite alternate;
+}
+@keyframes preview-load {
+  0% { transform: translateX(-20%); }
+  100% { transform: translateX(140%); }
+}
+@media (max-width: 720px) {
+  .preview__url, .preview__viewport { display: none; }
+  .preview__shell { width: 98vw; height: 92svh; box-shadow: 6px 6px 0 var(--red); }
+  .preview__bar { padding: 0.5rem 0.65rem; gap: 0.45rem; }
+  .preview__action span { display: none; }
+}
+
 /* ---------- Impact frame (full-screen inversion flash) ---------- */
 .impact {
   position: fixed;
